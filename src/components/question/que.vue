@@ -19,6 +19,9 @@
     </div>
     <div class="topic"></div>
     <div class="que-list"></div>
+    <div class="lq">
+    	<list-question></list-question>
+    </div>    
   </div>
   <div class="right">
     <div class="userinfo"></div>
@@ -37,7 +40,11 @@
 </template>
 
 <script>
+import listQuestion from './listQuestion.vue'
     export default {
+    	 components: {
+           listQuestion
+         },
         name: "que",
       data(){
           return{
