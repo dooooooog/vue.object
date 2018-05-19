@@ -1,4 +1,4 @@
-# synergy
+# muke
 
 > A Vue.js project
 
