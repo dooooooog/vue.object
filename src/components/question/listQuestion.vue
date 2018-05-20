@@ -37,27 +37,13 @@
 </template>
 <script>
 export default {
-        name: "list_question",
-    data(){
-          return{
+    name: "list_question",
+    props:{
+
           	items:{
-     	img:"../../../static/image/jstop.png",
-     	  index:[
-     	  	"javascript",
-     	  	"javascript",
-     	  	"javascript",
-     	  ],
-     	  question:"fuck you",
-     	  isDone:true,
-     	  isAdopt:true,
-     	  userName:"sbsbsbsbsb",
-     	  answertext:"ojbkojbkojbkojbk",
-     	  helpnumber:0,
-     	  point:2,
-     	  answernumber:2,
-     	  disagree:2,
+
      	 }
-        }
+
     }
 }
 </script>

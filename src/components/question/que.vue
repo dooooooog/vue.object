@@ -19,8 +19,8 @@
     </div>
     <div class="topic"></div>
     <div class="que-list"></div>
-    <div class="lq">
-    	<list-question></list-question>
+    <div class="lq" v-for="item1 in items">
+    	<list-question :items="item1"></list-question>
     </div>    
   </div>
   <div class="right">
@@ -47,7 +47,26 @@ import listQuestion from './listQuestion.vue'
          },
         name: "que",
       data(){
+      	var qu_item={
+        img:"../../../static/image/jstop.png",
+     	  index:[
+     	  	"javascript",
+     	  	"javascript",
+     	  	"javascript",
+     	  ],
+     	  question:"fuck you",
+     	  isDone:true,
+     	  isAdopt:true,
+     	  userName:"sbsbsbsbsb",
+     	  answertext:"ojbkojbkojbkojbk",
+     	  helpnumber:0,
+     	  point:2,
+     	  answernumber:2,
+     	  disagree:2,
+      	}
+      	var qu_items=[qu_item,qu_item,qu_item];
           return{
+          	items:qu_items,
             navs:['推荐','最新','等待回答','话题']
          }
       }
@@ -57,7 +76,8 @@ import listQuestion from './listQuestion.vue'
 <style scoped>
 .wenda{
   display: flex;
-  margin: 3% 7% 0;
+  width: 70%;
+  margin: 0 auto;
 }
   .left{
     display: flex;
@@ -145,5 +165,8 @@ import listQuestion from './listQuestion.vue'
   display: flex;
   flex-direction: column;
   flex: 1;
+}
+.lq{
+	border-bottom: #D9DDE1 solid 1px;
 }
 </style>
